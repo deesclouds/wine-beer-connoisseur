@@ -1,101 +1,117 @@
-.angry-grid {
+html{
+   overscroll-behavior: none;
+}
+
+body, h1{
+   background: hsl(0, 22%, 15%);
+   font-size: 62.5%;
+}
+h1{
+   text-align: center;
+   background-color: #f9cac9;
+   width: 75%;
+   margin: 0 auto;
+   border-radius: 20px;
+   font-size: 3rem;
+}
+
+.blog-grid {
+   font-size: 1.6rem;
+   text-align: center;
    display: grid; 
+   min-height: 200px;
+   /* border: 2px solid pink; */
 
-   grid-template-rows: 1fr 1fr 1fr 1fr;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
    
-   gap: 0px;
-   height:400px;
-   width:400px;
+   gap: 2%;
+   height:800px;
+   width:800px;
+   margin: auto;
 }
-  
-#item-0 {
-
-   background-color: #386641; 
-   grid-row-start: 1;
-   grid-column-start: 1;
-
-   grid-row-end: 2;
-   grid-column-end: 3;
-   
+  /*border for grid elements  */
+#Home, #About, #Wine, #Beer, #Footer{
+   border: 2px solid pink;
+   border-radius: 20px;
 }
-#item-1 {
 
-   background-color: #a7c957; 
-   grid-row-start: 2;
-   grid-column-start: 2;
-
-   grid-row-end: 4;
-   grid-column-end: 4;
+h1{
+   background: white;
+   width: 100%;
+   margin: 0 auto;
    
 }
-#item-2 {
+/* individual grid elements  */
+#Home {
 
-   background-color: #6a994e; 
-   grid-row-start: 1;
-   grid-column-start: 3;
+   background-color: #ffa600; 
+   border: 2px solid #7d5201; 
+   grid-row: 1 / 2;
+   grid-column: 1 / 4;
+}
 
-   grid-row-end: 2;
-   grid-column-end: 4;
+#Home > h2{
+   background-color: #f9eace; 
+}
+
+#About {
+
+   background-color: #ff6361; 
+   border: 2px solid #923b3a; 
+   grid-row: 2 / 4;
+   grid-column: 2 / 4;
+}
+
+#About > h2 {
+   background: #f9cac9;
+}
+
+#Wine {
+
+   background-color: #bc5090; 
+   border: 2px solid #682c50; 
+   grid-row: 1 / 4;
+   grid-column: 4 / 5;
    
 }
-#item-3 {
 
-   background-color: #386641; 
-   grid-row-start: 1;
-   grid-column-start: 4;
+#Wine > h2 {
+   background-color: #fdbde4; 
+}
 
-   grid-row-end: 3;
-   grid-column-end: 5;
+#Beer {
+   
+   background-color: #58508d; 
+   border: 2px solid #322e4f; 
+   grid-row: 2 / 5;
+   grid-column: 1 / 2;
    
 }
-#item-4 {
 
-   background-color: #386641; 
-   grid-row-start: 3;
-   grid-column-start: 1;
-
-   grid-row-end: 5;
-   grid-column-end: 2;
+#Beer > h2 {
+   background-color: #c6bdff; 
+}
+#Footer {
+   
+   background-color: #003f5c; 
+   border: 2px solid #01212f; 
+   grid-row: 4 / 5;
+   grid-column: 2 / 5;
    
 }
-#item-5 {
-
-   background-color: #6a994e; 
-   grid-row-start: 3;
-   grid-column-start: 4;
-
-   grid-row-end: 4;
-   grid-column-end: 5;
-   
+#Footer > h2 {
+  background-color: #73caf3; 
 }
-#item-6 {
 
-   background-color: #386641; 
-   grid-row-start: 4;
-   grid-column-start: 3;
-
-   grid-row-end: 5;
-   grid-column-end: 5;
-   
+#Footer > p{
+   color: skyblue;
 }
-#item-7 {
 
-   background-color: #6a994e; 
-   grid-row-start: 4;
-   grid-column-start: 2;
-
-   grid-row-end: 5;
-   grid-column-end: 3;
-   
+/* headers title borders */
+#Home > h2, #About > h2, #Beer > h2, #Wine > h2, #Footer > h2{ 
+border-radius: 18px 18px 0 0;
 }
-#item-8 {
-
-   background-color: #6a994e; 
-   grid-row-start: 2;
-   grid-column-start: 1;
-
-   grid-row-end: 3;
-   grid-column-end: 2;
-   
+a {
+   text-decoration: none;
+   color: black;
 }
